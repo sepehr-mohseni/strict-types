@@ -3,11 +3,6 @@
     "description": "Adds strict types declaration recursively to your PHP files",
     "type": "library",
     "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "SepMni\\StrictTypes\\": "src/"
-        }
-    },
     "authors": [
         {
             "name": "Sepehr Mohseni",
