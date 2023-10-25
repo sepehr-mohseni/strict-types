@@ -72,5 +72,3 @@ If you have any questions or encounter issues, please feel free to open a [GitHu
 ## Acknowledgments
 
 Special thanks to the PHP community and the tools that made this package possible.
-
-```
