@@ -1,7 +1,6 @@
 <?php
 declare(strict_types=1);
 require __DIR__ . '/../../autoload.php';
-namespace SepMni\StrictTypes;
 
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
@@ -64,7 +63,6 @@ class StrictTypes
     }
 }
 
-
 if(count($argv) < 3) {
     echo "Provide all the information to run";
     exit(1);
@@ -78,7 +76,6 @@ if (!is_dir($directory)) {
     echo "Error: The provided directory does not exist.\n";
     exit(1);
 }
-
 
 $strictTypes = new StrictTypes();
 $strictTypes->processDirectory($directory);
