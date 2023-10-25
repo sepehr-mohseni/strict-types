@@ -1,0 +1,26 @@
+{
+    "name": "sepmni/strict-types",
+    "description": "Adds strict types declaration recursively to your PHP files",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "SepMni\\StrictTypes\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Sepehr Mohseni",
+            "email": "sepmni@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "version": "1.0.0",
+    "require": {
+        "php": "^7.2 || ^8.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/sepmni/strict-types.git"
+    }
+}
