@@ -69,6 +69,7 @@ This package is open-source software licensed under the [MIT License](LICENSE).
 ## Support
 
 If you have any questions or encounter issues, please feel free to open a [GitHub issue](https://github.com/sepmni/strict-types/issues). We welcome your feedback and contributions!
+```
 
 ## Acknowledgments
 
