@@ -1,9 +1,11 @@
 <?php
 
-require __DIR__ . '/vendor/autoload.php';
+require __DIR__ . '/../../autoload.php';
 
-use SepMni\StrictTypes\StrictTypes;
-
+if(count($argv) < 3) {
+    echo "Provide all the information to run";
+    exit(1);
+}
 $directory = isset($argv[2]) ? $argv[2] : '.';
 if ($directory === '.') {
     $directory = getcwd();
