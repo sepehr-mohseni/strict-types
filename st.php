@@ -2,10 +2,6 @@
 declare(strict_types=1);
 require __DIR__ . '/../../autoload.php';
 
-use RecursiveDirectoryIterator;
-use RecursiveIteratorIterator;
-use SplFileInfo;
-
 class StrictTypes
 {
     public function addStrictTypes(string $filePath)
@@ -20,11 +16,9 @@ class StrictTypes
 
     private function addDeclareStrictTypes(string $content)
     {
-        // If the file doesn't start with <?php, add it along with declare(strict_types=1);
         if (strpos($content, '<?php') !== 0) {
             $content = "<?php\ndeclare(strict_types=1);\n" . $content;
         } else {
-            // If <?php is already present, add declare(strict_types=1); after it
             $content = preg_replace('/<\?php/', '<?php' . PHP_EOL . 'declare(strict_types=1);', $content, 1);
         }
 
@@ -35,7 +29,7 @@ class StrictTypes
     {
         $iterator = new \RecursiveDirectoryIterator($directory);
         $files = new \RecursiveIteratorIterator($iterator, \RecursiveIteratorIterator::SELF_FIRST);
-        
+
         foreach ($files as $file) {
             if ($this->shouldProcessFile($file)) {
                 $filePath = $file->getPathname();
@@ -51,9 +45,9 @@ class StrictTypes
         $filePath = $file->getPathname();
         $filename = $file->getFilename();
         return $file->isFile() &&
-               pathinfo($filename, PATHINFO_EXTENSION) == 'php' &&
-               strpos($filePath, 'vendor') === false &&
-               strpos($filename, '.blade.php') === false;
+            pathinfo($filename, PATHINFO_EXTENSION) == 'php' &&
+            strpos($filePath, 'vendor') === false &&
+            strpos($filename, '.blade.php') === false;
     }
 
     private function hasStrictTypesDeclaration(string $filePath)
@@ -63,7 +57,7 @@ class StrictTypes
     }
 }
 
-if(count($argv) < 3) {
+if (count($argv) < 3) {
     echo "Provide all the information to run";
     exit(1);
 }
