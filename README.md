@@ -26,7 +26,7 @@ composer require sepmni/strict-types
 Once installed, you can use the command-line interface (CLI) to add `declare(strict_types=1);` to your PHP files.
 
 ```bash
-php vendor/sepmni/strict-types.php add /path/to/your/php/files/directory
+php vendor/sepmni/strict-types/StrictTypes.php add /path/to/your/php/files/directory
 ```
 
 Replace `/path/to/your/php/files/directory` with the path to the directory you want to process.
@@ -47,7 +47,7 @@ project/
 To add strict types declarations to all PHP files in the `src/` directory (excluding those with existing declarations), you would run:
 
 ```bash
-php strict-types.php add project/src
+php vendor/sepmni/strict-types/StrictTypes.php add project/src
 ```
 
 The package will process all PHP files within the specified directory and its subdirectories.

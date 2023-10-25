@@ -17,9 +17,5 @@
     "minimum-stability": "stable",
     "require": {
         "php": "^7.2 || ^8.0"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/sepmni/strict-types.git"
     }
 }
